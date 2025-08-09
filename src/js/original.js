@@ -1,6 +1,6 @@
 const cells = document.querySelectorAll(".cell");
 const statusText = document.querySelector("#statusText");
-const restartBtn = document.querySeelctor("#restartBtn");
+const restartBtn = document.querySelector("#restartBtn");
 
 const winConditions = [ 
     [0, 1, 2],
@@ -11,7 +11,7 @@ const winConditions = [
     [2, 5, 8],
     [0, 4, 8],
     [2, 4, 6]
-]
+];
 
 let options = ["", "", "", "", "", "", "", "", ""];
 let currentPlayer = "X";
@@ -20,7 +20,7 @@ let running = false;
 initializeGame();
 
 function initializeGame() { //setup before game begins
-    cells.forEach(cell => cell.addEventListener("click", cellClicked()));
+    cells.forEach(cell => cell.addEventListener("click", cellClicked));
     restartBtn.addEventListener("click", restartGame);
     statusText.textContent = `${currentPlayer}'s turn`;
     running = true; //game is now running
@@ -29,7 +29,7 @@ function initializeGame() { //setup before game begins
 function cellClicked() { //occurence after cell is clicked
     const cellIndex = this.getAttribute("cellIndex");
 
-    if (options[cellIndex] !== "" || !running) { 
+    if (options[cellIndex] != "" || !running) { 
         return; //if cell is not empty or game is not running, do nothing
     }
 
@@ -48,7 +48,7 @@ function changePlayer() { //change current player
 }
 
 function checkWinner() { //check if there is a winner
-    let roundWOn = false;
+    let roundWon = false;
 
     for (let i = 0; i < winConditions.length; i++) { //iterate over each member of the win condition array
         const condition = winConditions[i]; // the array condition is the index of winConditions array
@@ -61,7 +61,7 @@ function checkWinner() { //check if there is a winner
         }
 
         if (cellA === cellB && cellB === cellC) { //if all three cells match
-            roundWOn = true; //set roundWon to true
+            roundWon = true; //set roundWon to true
             break; //exit the loop
         }
     }

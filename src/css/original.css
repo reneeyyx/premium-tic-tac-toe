@@ -17,3 +17,11 @@
     width:225px;
     margin: auto;
 }
+
+#infoContainer{
+    text-align: center;
+    font-family: "Permanent Marker", cursive;
+    margin-top:100px;
+    margin-left: 200px;
+    margin-right:200px;
+}

@@ -1,0 +1,8 @@
+#homeContainer {
+    text-align: center;
+    font-family: "Permanent Marker", cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
