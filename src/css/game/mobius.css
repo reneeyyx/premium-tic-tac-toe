@@ -1,0 +1,38 @@
+.cell{
+    width: 75px;
+    height: 75px;
+    border: 2px solid#000;
+    box-shadow: 0 0 0 2px; /*ensures all lines are same thickness*/
+    line-height:75px;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+#gameContainer {
+    font-family: "Permanent Marker", cursive;
+    text-align: center;
+}
+
+#cellContainer {
+    display: inline-grid;
+    grid-template-columns: repeat(4,auto);
+    width: 225px;
+    margin: 39px;
+    justify-content: center; 
+}
+
+.arrow {
+    font-size: 90px;
+    display: inline-block;
+    position: absolute;
+    top: 125px;
+    border: 4px solid #000;
+    padding-bottom: 114px;
+    padding-top:73px;
+    margin-inline-start: -58px;
+}
+
+.arrow + .arrow {
+    margin-left: 308px;
+}
+
